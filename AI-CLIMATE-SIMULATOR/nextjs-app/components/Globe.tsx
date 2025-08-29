@@ -872,6 +872,7 @@ export default function Globe({ pollutionLevel, metrics, specialEvent }: GlobePr
 
   return (
     <div className="w-full h-full">
+      <div></div>
       <Canvas camera={{ position: [0, 0, 15], fov: 60 }}>
         <ambientLight intensity={0.4} />
         <directionalLight position={[10, 10, 5]} intensity={0.8} />
@@ -884,6 +885,7 @@ export default function Globe({ pollutionLevel, metrics, specialEvent }: GlobePr
           isAutoRotating={isAutoRotating} 
         />
         
+      <div></div>
         <OrbitControls 
           enablePan={true}
           enableZoom={true}
@@ -892,6 +894,7 @@ export default function Globe({ pollutionLevel, metrics, specialEvent }: GlobePr
           onEnd={() => setIsAutoRotating(true)}
         />
       </Canvas>
+      <div></div>
     </div>
   )
 }
